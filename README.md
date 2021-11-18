@@ -1,2 +1,2 @@
-# sort-analyzer-python3-starter
+# sort-analyzer-python-starter
 Start Code for Python Sort Analyzer
