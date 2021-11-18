@@ -23,11 +23,11 @@ reversedData = loadDataArray("data-files/reversed-values.txt")
 nearlySortedData = loadDataArray("data-files/nearly-sorted-values.txt")
 fewUniqueData = loadDataArray("data-files/few-unique-values.txt")
 
-# VERIFY LOADED DATA BY PRINTING FIRST 20 ELEMENTS
-print(randomData[0:20])
-print(reversedData[0:20])
-print(nearlySortedData[0:20])
-print(fewUniqueData[0:20])
+# VERIFY LOADED DATA BY PRINTING FIRST 50 ELEMENTS
+print(randomData[0:50])
+print(reversedData[0:50])
+print(nearlySortedData[0:50])
+print(fewUniqueData[0:50])
 
 
 # EXAMPLE OF HOW TO TIME DURATION OF A SORT ALGORITHM
