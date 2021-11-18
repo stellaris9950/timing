@@ -3,8 +3,6 @@
 import time
 
 # RETURN DATA FROM FILE AS AN ARRAY OF INTERGERS
-
-
 def loadDataArray(fileName):
     temp = []
 
@@ -33,8 +31,7 @@ print(fewUniqueData[0:20])
 
 
 # EXAMPLE OF HOW TO TIME DURATION OF A SORT ALGORITHM
-# arrayCopy = randomData[:]  # Make a copy to preserver original data
 # startTime = time.time()
-# bubbleSort(arrayCopy)
+# bubbleSort(randomData)
 # endTime = time.time()
 # print(f"Bubble Sort Random Data: {endTime - startTime} seconds")
