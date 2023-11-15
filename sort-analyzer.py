@@ -24,12 +24,6 @@ reversedData = loadDataArray("data-files/reversed-values.txt")
 nearlySortedData = loadDataArray("data-files/nearly-sorted-values.txt")
 fewUniqueData = loadDataArray("data-files/few-unique-values.txt")
 
-# VERIFY LOADED DATA BY PRINTING FIRST 50 ELEMENTS
-print(randomData[0:50])
-print(reversedData[0:50])
-print(nearlySortedData[0:50])
-print(fewUniqueData[0:50])
-
 
 # EXAMPLE OF HOW TO TIME DURATION OF A SORT ALGORITHM
 # startTime = time.time()
@@ -42,7 +36,7 @@ def timing(function_to_call, array_to_sort):
     function_to_call(array_to_sort)
     endTime = time.time()
     timeTaken = endTime - startTime
-    return timeTaken
+    print(timeTaken)
 
 
 def bubbleSort(anArray):
@@ -72,15 +66,18 @@ def insertionSort(anArray):
             previous_position -= 1
         anArray[previous_position + 1] = item
 
-
+number = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 def average(function_to_call, amount_of_turns_to_run):
     arrays_to_sort = [randomData, reversedData, nearlySortedData, fewUniqueData]
-    average_list = []
+
 
     for item in arrays_to_sort:
+
+        average_list = []
         for i in range(amount_of_turns_to_run):
+            copy = item[:]
             startTime = time.time()
-            function_to_call(item)
+            function_to_call(copy)
             endTime = time.time()
             timeTaken = endTime - startTime
 
@@ -89,12 +86,12 @@ def average(function_to_call, amount_of_turns_to_run):
         average_calculate = 0
         for item in average_list:
             average_calculate += item
-
+        print(average_calculate)
         result = average_calculate / amount_of_turns_to_run
 
         print(f"average time of sorting is {result}s")
 
 
 
-
 average(bubbleSort, 5)
+
